@@ -1,7 +1,10 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "Mahakoshal-Refractories",
+    title: `Gatsby Default Starter`,
+    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    author: `@vedantlohbare`,
+    keywords: ["gatsby", "starter"],
+    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -17,7 +20,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/gatsby-icon.png",
       },
     },
     "gatsby-transformer-remark",
@@ -29,15 +32,13 @@ module.exports = {
         name: "images",
         path: "./src/images/",
       },
-      __key: "images",
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
-        path: "./src/pages/",
+        path: "./src/content/",
       },
-      __key: "pages",
     },
   ],
 };
