@@ -1,12 +1,12 @@
-import React from "react"
-import { Wrapper, ClientImage } from "./styles"
-import { useStaticQuery, graphql } from "gatsby"
-import Slider from "react-slick"
+import React from "react";
+import { Wrapper, ClientImage } from "./styles";
+import { useStaticQuery, graphql } from "gatsby";
+import Slider from "react-slick";
 function HiddenNextArrow() {
-  return <div style={{ display: "none" }} />
+  return <div style={{ display: "none" }} />;
 }
 function HiddenPrevArrow() {
-  return <div style={{ display: "none" }} />
+  return <div style={{ display: "none" }} />;
 }
 
 export function Clients() {
@@ -36,7 +36,7 @@ export function Clients() {
         },
       },
     ],
-  }
+  };
   const ClientImages = useStaticQuery(graphql`
     {
       allFile(filter: { relativeDirectory: { eq: "Clients" } }) {
@@ -46,7 +46,7 @@ export function Clients() {
         }
       }
     }
-  `)
+  `);
   return (
     <Wrapper className="Container">
       <h4>
@@ -54,10 +54,14 @@ export function Clients() {
         <span className="brandRed">50 years</span>
       </h4>
       <Slider {...settings}>
-        {ClientImages.allFile.nodes.map(image => (
-          <ClientImage src={image.publicURL} alt={image.name} />
+        {ClientImages.allFile.nodes.map((image) => (
+          <ClientImage
+            src={image.publicURL}
+            alt={image.name}
+            key={image.name}
+          />
         ))}
       </Slider>
     </Wrapper>
-  )
+  );
 }

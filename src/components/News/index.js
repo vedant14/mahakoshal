@@ -1,9 +1,10 @@
 import React from "react";
-import { Wrapper } from "./styles";
+import { Wrapper, Card } from "./styles";
 import Slider from "react-slick";
+import { useStaticQuery, graphql } from "gatsby";
 import ArrowLeft from "../../images/Landing/left-arrow.png";
 import ArrowRight from "../../images/Landing/right-arrow.png";
-import Dummy from "../../images/Landing/Dummy.png";
+
 function CustomNextArrow(props) {
   const { className, style, onClick } = props;
 
@@ -31,6 +32,21 @@ function CustomPrevArrow(props) {
 }
 
 export function News() {
+  const data = useStaticQuery(graphql`
+    {
+      allGraphCmsNewsArticle(sort: { order: DESC, fields: publishedAt }) {
+        nodes {
+          title
+          id
+          description
+          articleUrl
+          coverImage {
+            url
+          }
+        }
+      }
+    }
+  `);
   const settings = {
     dots: true,
     infinite: true,
@@ -63,70 +79,18 @@ export function News() {
     <Wrapper className="Container">
       <h1>Featured in News</h1>
       <Slider {...settings} className="custom-slide">
-        <div className="card">
-          <img src={Dummy} alt="New" />
-          <h4> Mahakoshal in news today, following covid safety</h4>
-          <p>
-            Amidst the pandemic, there are still people who take necessary
-            precations to fight the virus
-          </p>
-        </div>
-        <div className="card">
-          <img src={Dummy} alt="New" />
-          <h4> Mahakoshal in news today, following covid safety</h4>
-          <p>
-            Amidst the pandemic, there are still people who take necessary
-            precations to fight the virus
-          </p>
-        </div>
-        <div className="card">
-          <img src={Dummy} alt="New" />
-          <h4> Mahakoshal in news today, following covid safety</h4>
-          <p>
-            Amidst the pandemic, there are still people who take necessary
-            precations to fight the virus
-          </p>
-        </div>
-        <div className="card">
-          <img src={Dummy} alt="New" />
-          <h4> Mahakoshal in news today, following covid safety</h4>
-          <p>
-            Amidst the pandemic, there are still people who take necessary
-            precations to fight the virus
-          </p>
-        </div>
-        <div className="card">
-          <img src={Dummy} alt="New" />
-          <h4> Mahakoshal in news today, following covid safety</h4>
-          <p>
-            Amidst the pandemic, there are still people who take necessary
-            precations to fight the virus
-          </p>
-        </div>
-        <div className="card">
-          <img src={Dummy} alt="New" />
-          <h4> Mahakoshal in news today, following covid safety</h4>
-          <p>
-            Amidst the pandemic, there are still people who take necessary
-            precations to fight the virus
-          </p>
-        </div>
-        <div className="card">
-          <img src={Dummy} alt="New" />
-          <h4> Mahakoshal in news today, following covid safety</h4>
-          <p>
-            Amidst the pandemic, there are still people who take necessary
-            precations to fight the virus
-          </p>
-        </div>
-        <div className="card">
-          <img src={Dummy} alt="New" />
-          <h4> Mahakoshal in news today, following covid safety</h4>
-          <p>
-            Amidst the pandemic, there are still people who take necessary
-            precations to fight the virus
-          </p>
-        </div>
+        {data.allGraphCmsNewsArticle.nodes.map((item) => (
+          <Card
+            href={item.articleUrl}
+            key={item.id}
+            target="_blank"
+            role="button"
+          >
+            <img src={item.coverImage.url} alt="NewsImage" />
+            <h4> {item.title}</h4>
+            <p>{item.description}</p>
+          </Card>
+        ))}
       </Slider>
     </Wrapper>
   );

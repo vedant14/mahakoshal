@@ -1,3 +1,6 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -38,6 +41,14 @@ module.exports = {
       options: {
         name: "pages",
         path: "./src/content/",
+      },
+    },
+    {
+      resolve: `gatsby-source-graphcms`,
+      options: {
+        endpoint: process.env.GRAPHCMS_ENDPOINT,
+        token: process.env.GRAPHCMS_TOKEN,
+        // downloadLocalImages: true,
       },
     },
   ],

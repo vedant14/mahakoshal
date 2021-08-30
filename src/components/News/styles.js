@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { colors } from "../../styles/GlobalStyles"
+import styled from "styled-components";
+import { colors } from "../../styles/GlobalStyles";
 
 export const Wrapper = styled.div`
   margin-bottom: 150px;
@@ -24,7 +24,7 @@ export const Wrapper = styled.div`
   }
 
   .left-arrow {
-    left: 20%;
+    left: 35%;
     @media screen and (min-width: 768px) {
       left: 40%;
     }
@@ -33,7 +33,7 @@ export const Wrapper = styled.div`
     }
   }
   .right-arrow {
-    right: 20%;
+    right: 35%;
     @media screen and (min-width: 768px) {
       right: 40%;
     }
@@ -41,31 +41,31 @@ export const Wrapper = styled.div`
       right: -10%;
     }
   }
-  .card {
-    text-align: left;
-    background: ${colors.lightBlue};
-    border-radius: 4px;
+`;
+export const Card = styled.a`
+  text-align: left;
+  background: ${colors.lightBlue};
+  border-radius: 4px;
+  width: 90% !important;
+  @media screen and (min-width: 768px) {
     width: 90% !important;
-    @media screen and (min-width: 768px) {
-      width: 90% !important;
-    }
-    @media screen and (min-width: 1024px) {
-      width: 80% !important;
-      margin: 30px 30px;
-    }
-    > h4 {
-      margin: 20px 25px;
-    }
-    > p {
-      margin: 0px 25px 30px 25px;
-    }
-    > img {
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
-      width: 100%;
-    }
-    &:hover {
-      box-shadow: 4px 8px 8px #dae3ea;
-    }
   }
-`
+  @media screen and (min-width: 1024px) {
+    width: 80% !important;
+    margin: 30px 30px;
+  }
+  > h4 {
+    margin: 20px 25px;
+  }
+  > p {
+    margin: 0px 25px 30px 25px;
+  }
+  > img {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    width: 100%;
+  }
+  &:hover {
+    box-shadow: 4px 8px 8px #dae3ea;
+  }
+`;

@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import {
   Layout,
   SEO,
@@ -6,18 +6,22 @@ import {
   Clients,
   Stats,
   News,
-  Testimonials,
-} from "../components"
+  Testimony,
+  ProductsGrid,
+} from "../components";
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <Hero />
-    <Clients />
-    <Stats />
-    <News />
-    <Testimonials />
-  </Layout>
-)
+const IndexPage = () => {
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <Hero />
+      <Clients />
+      <Stats />
+      <News />
+      <Testimony />
+      <ProductsGrid />
+    </Layout>
+  );
+};
 
-export default IndexPage
+export default IndexPage;

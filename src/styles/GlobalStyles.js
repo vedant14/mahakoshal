@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
 export const colors = {
   primaryBlack: "#262626",
@@ -8,7 +8,7 @@ export const colors = {
   darkGrey: "#6D7D8B",
   white: "#FFFFFF",
   lightBlue: "rgba(153, 149, 252, 0.2)",
-}
+};
 
 export const GlobalStyles = createGlobalStyle`
   :root {
@@ -35,7 +35,6 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 800;
     font-size: 32px;
     line-height: 30px;
-    color: ${colors.primaryBlack};
     @media screen and (min-width: 768px) {
       font-size: 48px;
       line-height: 46px;
@@ -80,7 +79,6 @@ export const GlobalStyles = createGlobalStyle`
 
   p, a, li {
     font-family: 'Mulish', sans-serif;
-    color: ${colors.washedBlack};
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
@@ -172,41 +170,4 @@ export const GlobalStyles = createGlobalStyle`
   .slick-prev:before, .slick-next:before  {
     content: '' !important;
   }
-
-/*
-    .slider {
-      -webkit-appearance: none;
-      width: 100%;
-      margin: 60px auto;
-      height: 10px;
-      background: #E0E0E0;
-      outline: none;
-      opacity: 0.7;
-      -webkit-transition: .2s;
-      transition: opacity .2s;
-      border-radius: 20px;
-    }
-
-    .slider:hover {
-      opacity: 1;
-    }
-
-    .slider::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      z-index: 10;
-      width: 30px;
-      height: 30px;
-      border-radius: 50px;
-      background: ${colors.primary};
-      cursor: pointer;
-    }
-
-    .slider::-moz-range-thumb {
-      width: 25px;
-      height: 25px;
-      background: #04AA6D;
-      cursor: pointer;
-    }
-*/
-`
+`;

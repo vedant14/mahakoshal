@@ -1,0 +1,41 @@
+fragment Career on Career {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  jobName
+  jobDescription {
+    ... on RichText {
+      raw
+      html
+      markdown
+      text
+    }
+  }
+  experience
+  jobLink
+  location
+  createdBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  updatedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  publishedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  active
+}

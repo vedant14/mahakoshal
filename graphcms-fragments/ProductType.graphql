@@ -1,0 +1,44 @@
+fragment ProductType on ProductType {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  name
+  description {
+    ... on RichText {
+      raw
+      html
+      markdown
+      text
+    }
+  }
+  createdBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  updatedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  publishedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  childProducts {
+    ... on Product {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+}

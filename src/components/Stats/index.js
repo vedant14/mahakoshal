@@ -1,36 +1,36 @@
-import React from "react"
-import { Wrapper } from "./styles"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import { Wrapper } from "./styles";
+import { useStaticQuery, graphql } from "gatsby";
 
 export function Stats() {
   const data = useStaticQuery(graphql`
     {
-      markdownRemark(frontmatter: { type: { eq: "stats" } }) {
-        id
-        frontmatter {
-          statistics {
-            id
-            number
-            sub
-            text
-          }
+      allGraphCmsStatistic(
+        limit: 6
+        sort: { fields: publishedAt, order: ASC }
+      ) {
+        nodes {
+          id
+          title
+          description
+          paragraph
         }
       }
     }
-  `)
+  `);
   return (
     <Wrapper>
       <div id="Grid" className="Container">
-        {data.markdownRemark.frontmatter.statistics.map(item => (
+        {data.allGraphCmsStatistic.nodes.map((item) => (
           <div key={item.id}>
             <div>
-              <span id="title">{item.number}</span>
-              <h2>{item.sub}</h2>
+              <span id="title">{item.title}</span>
+              <h2>{item.description}</h2>
             </div>
-            <p>{item.text}</p>
+            <p>{item.paragraph}</p>
           </div>
         ))}
       </div>
     </Wrapper>
-  )
+  );
 }

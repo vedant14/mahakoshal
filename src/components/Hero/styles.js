@@ -1,11 +1,13 @@
-import styled from "styled-components"
-import { colors } from "../../styles/GlobalStyles"
+import styled from "styled-components";
+import { colors } from "../../styles/GlobalStyles";
 
 export const Wrapper = styled.div`
   width: 100%;
   position: relative;
   .BGImage {
     height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
   height: 80vh;
   @media screen and (min-width: 768px) {
@@ -43,4 +45,4 @@ export const Wrapper = styled.div`
       }
     }
   }
-`
+`;
