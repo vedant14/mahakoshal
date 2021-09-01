@@ -1,6 +1,7 @@
 import React from "react";
 import { Wrapper, Card } from "./styles";
 import { useStaticQuery, graphql } from "gatsby";
+import CardArrow from "../../images/card-arrow.png";
 
 export function ProductsGrid() {
     const data = useStaticQuery(graphql`
@@ -32,19 +33,13 @@ export function ProductsGrid() {
             {data.allGraphCmsProduct.nodes.map((item) => (
                 <Card to={`/products/${item.productLink}`}>
                     <img
+                        id="product-image"
                         src={item.productImages[0].url}
                         alt={item.productName}
                     />
                     <h4>{item.productName}</h4>
+                    {/* <img id="arrow" src={CardArrow} alt="Card-Arrow" /> */}
                     <p>{item.cardDescription} </p>
-                </Card>
-            ))}
-            {data.allGraphCmsProduct.nodes.map((item) => (
-                <Card>
-                    <img
-                        src={item.productImages[0].url}
-                        alt={item.productName}
-                    />
                 </Card>
             ))}
         </Wrapper>

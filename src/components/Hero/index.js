@@ -1,7 +1,6 @@
 import React from "react";
 import { Wrapper } from "./styles";
 import { useStaticQuery, graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 export function Hero() {
   const HeroData = useStaticQuery(graphql`
@@ -22,7 +21,6 @@ export function Hero() {
       }
     }
   `);
-  const image = getImage(HeroData.file);
   const text = HeroData.markdownRemark.frontmatter;
   return (
     <Wrapper>

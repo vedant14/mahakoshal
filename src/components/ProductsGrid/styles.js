@@ -17,6 +17,13 @@ export const Wrapper = styled.div`
         h3 {
             margin-bottom: 0px;
         }
+        > h3 {
+            color: ${colors.darkGrey};
+        }
+        grid-column: 1 / span 2;
+        @media screen and (min-width: 1024px) {
+            grid-column: 1;
+        }
     }
 `;
 
@@ -28,18 +35,22 @@ export const Card = styled(Link)`
         padding: 20px;
     }
     transition: 0.5s;
-    > img {
+    > img#product-image {
         display: block;
         height: 100px;
         @media screen and (min-width: 768px) {
             height: 200px;
         }
         @media screen and (min-width: 1024px) {
-            height: 200px;
+            height: 220px;
         }
         width: 100%;
         border-radius: 10px;
         object-fit: cover;
+    }
+    > img#arrow {
+        width: 45px;
+        position: absolute;
     }
     > h4 {
         margin-top: 10px;
@@ -51,7 +62,7 @@ export const Card = styled(Link)`
         @media screen and (min-width: 768px) {
             margin-top: 20px;
         }
-        color: ${colors.washedBlack};
+        color: ${colors.darkGrey};
     }
     &:hover {
         box-shadow: 4px 8px 8px #dae3ea;
