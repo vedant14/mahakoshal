@@ -25,7 +25,7 @@ export const Wrapper = styled.div`
             grid-column: 1;
         }
         > button {
-            background: ${colors.lightBlue};
+            background: ${colors.brandBlue};
             padding: 10px 20px;
             margin-top: 20px;
             border-radius: 4px;
@@ -33,7 +33,7 @@ export const Wrapper = styled.div`
             align-items: center;
             > h4 {
                 margin: 0px;
-                color: ${colors.brandBlue};
+                color: ${colors.white};
             }
             > img {
                 width: 30px;

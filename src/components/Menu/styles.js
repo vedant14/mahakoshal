@@ -66,15 +66,6 @@ export const Nav = styled.div`
         opacity: 1;
       }
     }
-    > button {
-      background: ${colors.lightBlue};
-      border-radius: 0px;
-      color: ${colors.brandBlue};
-      padding: 7px 30px;
-      > a {
-        font-size: 1.3rem;
-      }
-    }
   }
   .nav-link {
     > a {

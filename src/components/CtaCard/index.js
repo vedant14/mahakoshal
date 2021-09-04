@@ -11,9 +11,9 @@ export function CtaCard({ head, subHead, btnText, btnLink }) {
                     <h2>{head}</h2>
                     <p>{subHead}</p>
                     <div>
-                        <Link to={btnLink}>
-                            <button className="button">{btnText}</button>
-                        </Link>
+                        <button className="secondary-button button">
+                            <Link to={btnLink}>{btnText}</Link>
+                        </button>
                     </div>
                     <small>Serving companies since 1969</small>
                 </Wrapper>

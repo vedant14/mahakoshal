@@ -123,15 +123,34 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  .primary-button {
-    color: ${colors.white} !important;
-    background: ${colors.brandBlue};
+  .primary-button, .secondary-button {
     padding: 15px 40px;
-    font-size: 18px;
+    > a {
+      font-size: 18px;
+    }
     line-height: 20px;
     font-weight: bold;
     font-style: normal;
     border-radius: 4px;
+  }
+
+
+  .primary-button{
+    color: ${colors.white};
+    background: ${colors.brandBlue};
+    &:hover{
+      color: ${colors.brandBlue};
+      background: ${colors.lightBlue};
+    }
+  }
+
+  .secondary-button{
+    color: ${colors.brandBlue};
+    background: ${colors.white};
+    &:hover{
+      color: ${colors.white};
+      background: ${colors.brandBlue};
+    }
   }
 
   .active {
@@ -190,6 +209,9 @@ export const GlobalStyles = createGlobalStyle`
     }
      > tr > th , > tr > td{
         padding: 25px 30px;
+        > a {
+          color: ${colors.brandBlue};
+        }
     }
   }
 

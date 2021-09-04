@@ -57,14 +57,10 @@ export const NavScroll = styled.ul`
       top: 100px;
     }
     > button {
-      background: ${colors.lightBlue};
-      border-radius: 0px;
-      color: ${colors.brandBlue};
-      padding: 12px 30px;
       > a {
-        font-size: 1.3rem;
+        font-size: 18px;
         @media screen and (min-width: 728px) {
-          font-size: 30px;
+          font-size: 18px;
         }
       }
     }

@@ -28,7 +28,7 @@ export function ProductsGrid() {
                 <h3>
                     Trusted products by industry standards and tested thouroghly
                 </h3>
-                <button className="button">
+                <button className="primary-button button">
                     <h4>See all</h4>
                     <img src={BoxArrow} alt="arrow" />
                 </button>
