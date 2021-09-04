@@ -8,7 +8,7 @@ import {
   News,
   Testimony,
   ProductsGrid,
-  ContactUsButton,
+  CtaCard,
   Footer,
 } from "../components";
 
@@ -22,7 +22,13 @@ const IndexPage = () => {
       <News />
       <Testimony />
       <ProductsGrid />
-      <ContactUsButton />
+      <CtaCard
+        head="Interested in securing our services?"
+        subHead="Please fill out this form and our team will reach out to
+                        you at the earliest."
+        btnText="Contact Us"
+        btnLink="/contact-us"
+      />
       <Footer />
     </Layout>
   );

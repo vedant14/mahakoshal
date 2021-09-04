@@ -1,11 +1,10 @@
-fragment Team on Team {
+fragment Certificate on Certificate {
   stage
   remoteId: id
   createdAt
   updatedAt
   publishedAt
-  name
-  designation
+  description
   createdBy {
     ... on User {
       remoteTypeName: __typename
@@ -27,7 +26,7 @@ fragment Team on Team {
       stage
     }
   }
-  profileImage {
+  certificate {
     ... on Asset {
       remoteTypeName: __typename
       remoteId: id
@@ -35,5 +34,4 @@ fragment Team on Team {
       stage
     }
   }
-  active
 }

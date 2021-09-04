@@ -109,7 +109,7 @@ export const Card = styled.div`
     width: 70%;
     margin: 0px auto;
     @media screen and (min-width: 1024px) {
-      top: 20%;
+      top: 10%;
       right: 0;
       position: absolute;
       padding: 20px 40px;

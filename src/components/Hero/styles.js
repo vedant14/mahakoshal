@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
   > div#HeroText {
     z-index: 100;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
     width: 500px;
     -webkit-transform: translateX(-50%);
@@ -37,12 +37,18 @@ export const Wrapper = styled.div`
       width: 100%;
       max-width: 1800px;
     }
-    > h1,
-    h4 {
+    > h1 {
       color: ${colors.white};
+      margin-bottom: 15px;
       @media screen and (min-width: 768px) {
         width: 500px;
       }
+    }
+    > h3 {
+      color: ${colors.white};
+      width: fit-content;
+      margin-top: 0px;
+      border-bottom: 2px solid ${colors.white};
     }
   }
 `;

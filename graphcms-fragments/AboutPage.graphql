@@ -1,11 +1,17 @@
-fragment Team on Team {
+fragment AboutPage on AboutPage {
   stage
   remoteId: id
   createdAt
   updatedAt
   publishedAt
-  name
-  designation
+  content {
+    ... on RichText {
+      raw
+      html
+      markdown
+      text
+    }
+  }
   createdBy {
     ... on User {
       remoteTypeName: __typename
@@ -27,7 +33,7 @@ fragment Team on Team {
       stage
     }
   }
-  profileImage {
+  backgroundImage {
     ... on Asset {
       remoteTypeName: __typename
       remoteId: id
@@ -35,5 +41,4 @@ fragment Team on Team {
       stage
     }
   }
-  active
 }

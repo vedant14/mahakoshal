@@ -5,10 +5,10 @@ fragment Footer on Footer {
   updatedAt
   publishedAt
   heading
-  aboutCompany
   company
   product
   address
+  aboutCompany
   createdBy {
     ... on User {
       remoteTypeName: __typename

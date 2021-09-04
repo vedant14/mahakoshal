@@ -6,5 +6,7 @@ export * from "./Stats";
 export * from "./News";
 export * from "./Testimony";
 export * from "./ProductsGrid";
-export * from "./ContactUsButton";
+export * from "./CtaCard";
 export * from "./Footer";
+export * from "./AboutUs";
+export * from "./Team";

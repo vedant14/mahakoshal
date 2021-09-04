@@ -1,19 +1,19 @@
 import React from "react";
 import { Wrapper } from "./styles";
+import { Link } from "gatsby";
 import { Background } from "../Background";
 
-export function ContactUsButton() {
+export function CtaCard({ head, subHead, btnText, btnLink }) {
     return (
         <div style={{ marginBottom: `100px`, marginTop: `100px` }}>
             <Background>
                 <Wrapper className="Container">
-                    <h2>Interested in securing our services?</h2>
-                    <p>
-                        Please fill out this form and our team will reach out to
-                        you at the earliest.
-                    </p>
+                    <h2>{head}</h2>
+                    <p>{subHead}</p>
                     <div>
-                        <button>Contact Us</button>
+                        <Link to={btnLink}>
+                            <button className="button">{btnText}</button>
+                        </Link>
                     </div>
                     <small>Serving companies since 1969</small>
                 </Wrapper>

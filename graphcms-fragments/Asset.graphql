@@ -53,5 +53,26 @@ fragment Asset on Asset {
       stage
     }
   }
+  certificateCertificate {
+    ... on Certificate {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  backgroundImageAboutPage {
+    ... on AboutPage {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  profileImageTeam {
+    ... on Team {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
   url
 }

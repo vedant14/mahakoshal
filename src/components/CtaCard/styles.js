@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
     text-align: center;
     > div {
         text-align: center;
-        > button {
+        > a > button {
             margin: 20px auto;
             background: ${colors.white};
             padding: 20px 50px;

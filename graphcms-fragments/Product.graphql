@@ -5,9 +5,9 @@ fragment Product on Product {
   updatedAt
   publishedAt
   productName
-  productLink
-  description
   cardDescription
+  description
+  productLink
   createdBy {
     ... on User {
       remoteTypeName: __typename

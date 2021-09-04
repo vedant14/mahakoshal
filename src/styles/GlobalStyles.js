@@ -112,8 +112,11 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   button {
-    cursor: pointer;
     border: none;
+  }
+
+  .button {
+    cursor: pointer;
     transition: 0.5s;
     &:hover {
         box-shadow: 4px 5px 3px ${colors.darkGrey};
@@ -132,23 +135,27 @@ export const GlobalStyles = createGlobalStyle`
     color: ${colors.darkGrey};
   }
 
-
   .Container {
-      margin: auto 30px;
-      @media screen and (min-width: 768px) {
-        margin: auto 60px;
-      }
-      @media screen and (min-width: 1024px) {
-        margin: auto 60px;
-      }
-      @media screen and (min-width: 1324px) {
-        margin: auto 150px;
-      }
-      @media screen and (min-width: 1920px) {
-        max-width: 1800px;
-        margin: auto;
-      }
+    margin-left: 30px;
+    margin-right: 30px;
+    @media screen and (min-width: 768px) {
+      margin-left: 60px;
+      margin-right: 60px;
     }
+    @media screen and (min-width: 1024px) {
+      margin-left: 60px;
+      margin-right: 60px;
+    }
+    @media screen and (min-width: 1324px) {
+      margin-left: 150px;
+      margin-right: 150px;
+    }
+    @media screen and (min-width: 1920px) {
+      max-width: 1600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
   .Overlay {
     position: absolute;
     background: ${colors.lightBlue};

@@ -28,7 +28,7 @@ export function Hero() {
       <img src={HeroData.file.publicURL} alt="heo" className="BGImage" />
       <div id="HeroText">
         <h1>{text.heroTitle}</h1>
-        <h4>{text.heroSubTitle}</h4>
+        <h3>{text.heroSubTitle}</h3>
       </div>
     </Wrapper>
   );

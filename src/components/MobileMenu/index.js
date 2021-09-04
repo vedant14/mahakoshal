@@ -15,7 +15,7 @@ export function MobileMenu({ menuOpen, items, setMenuOpen }) {
             </Link>
           ))}
           <li>
-            <button>
+            <button className="button">
               <Link to="/contact-us">Contact Us</Link>
             </button>
           </li>
