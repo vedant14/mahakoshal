@@ -27,7 +27,7 @@ export function Footer() {
                     <img src={Logo} alt="Logo" />
                     <small>{data.graphCmsFooter.aboutCompany}</small>
                 </div>
-                <div id="list">
+                <div id="company">
                     <h3>Company</h3>
                     <ul>
                         {data.graphCmsFooter.company.map((item) => (
@@ -37,7 +37,7 @@ export function Footer() {
                         ))}
                     </ul>
                 </div>
-                <div id="list">
+                <div id="product">
                     <h3>Product</h3>
                     <ul>
                         {data.graphCmsFooter.product.map((item) => (
@@ -47,7 +47,7 @@ export function Footer() {
                         ))}
                     </ul>
                 </div>
-                <div id="list">
+                <div id="address">
                     <h3>Address</h3>
                     <ul>
                         <li>{data.graphCmsFooter.address}</li>

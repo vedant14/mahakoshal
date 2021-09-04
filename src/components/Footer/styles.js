@@ -4,9 +4,22 @@ import { colors } from "../../styles/GlobalStyles";
 export const Wrapper = styled.div`
     > div#grid {
         display: grid;
-        grid-gap: 80px;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "brand brand"
+            "company product"
+            "address address";
+        grid-gap: 40px;
+        @media screen and (min-width: 768px) {
+            grid-gap: 80px;
+            grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (min-width: 1024px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas: "brand company product address";
+        }
         > div#brand {
+            grid-area: brand;
             display: block;
             overflow: hidden;
             > img {
@@ -15,7 +28,7 @@ export const Wrapper = styled.div`
                 margin-bottom: 40px;
             }
         }
-        > div#list {
+        > div {
             > h3 {
                 padding-bottom: 5px;
                 border-bottom: 1px solid ${colors.brandRed};
@@ -35,6 +48,15 @@ export const Wrapper = styled.div`
                     }
                 }
             }
+        }
+        > div#company {
+            grid-area: company;
+        }
+        > div#product {
+            grid-area: product;
+        }
+        > div#address {
+            grid-area: address;
         }
     }
     > div#growth {
