@@ -77,7 +77,7 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  p, a, li {
+  p, a, li, th, td {
     font-family: 'Mulish', sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -104,8 +104,8 @@ export const GlobalStyles = createGlobalStyle`
   a {
     font-weight: 500;
     text-decoration: none;
-    color: ${colors.brandBlue};
     line-height: initial;
+    color: inherit;
     &:hover {
       text-decoration: none; 
     }
@@ -122,6 +122,18 @@ export const GlobalStyles = createGlobalStyle`
         box-shadow: 4px 5px 3px ${colors.darkGrey};
     }
   }
+
+  .primary-button {
+    color: ${colors.white} !important;
+    background: ${colors.brandBlue};
+    padding: 15px 40px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+    font-style: normal;
+    border-radius: 4px;
+  }
+
   .active {
     padding-bottom: 4px;
     color: ${colors.primaryBlack} !important;
@@ -166,6 +178,20 @@ export const GlobalStyles = createGlobalStyle`
     height: 100%;
   }
 
+  table {
+    border: 1px solid ${colors.darkGrey};
+    border-radius: 10px;
+    margin: 10px auto;
+    border-collapse: collapse;
+    text-align: center;
+    width: 80%;
+    > tr > th{
+      background: ${colors.lightBlue};
+    }
+     > tr > th , > tr > td{
+        padding: 25px 30px;
+    }
+  }
 
   .slick-prev:before, .slick-next:before  {
     content: '' !important;

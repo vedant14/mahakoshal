@@ -10,3 +10,5 @@ export * from "./CtaCard";
 export * from "./Footer";
 export * from "./AboutUs";
 export * from "./Team";
+export * from "./BackgroundImage";
+export * from "./JobTable";
