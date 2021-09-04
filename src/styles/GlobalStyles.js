@@ -120,8 +120,9 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
   .active {
-    background: ${colors.primary};
-    color: ${colors.white};
+    padding-bottom: 4px;
+    color: ${colors.primaryBlack} !important;
+    border-bottom: 3px solid ${colors.brandRed};
   }
 
   .brandRed{

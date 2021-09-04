@@ -56,9 +56,11 @@ export const Card = styled.a`
   }
   > h4 {
     margin: 20px 25px;
+    color: ${colors.primaryBlack};
   }
   > p {
     margin: 0px 25px 30px 25px;
+    color: ${colors.washedBlack};
   }
   > img {
     border-top-left-radius: 4px;

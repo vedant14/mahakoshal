@@ -4,6 +4,8 @@ export const HeaderWrapper = styled.header`
   position: fixed;
   background: ${colors.white};
   top: 0;
+  box-shadow: 0px 1px 5px ${colors.washedBlack};
+
   z-index: 999;
   width: 100%;
   > div {

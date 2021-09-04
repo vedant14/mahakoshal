@@ -11,25 +11,27 @@ export const Wrapper = styled.div`
   > p {
     margin-top: 0;
     margin-bottom: 55px;
+    color: ${colors.washedBlack};
   }
   > div#mobile-button {
-  display: flex;
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-  position: relative;
-  width: 100%;
-  justify-content: center;
-  > button {
-    border: none;
-    background: none;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    > img {
-      width: 40px;
+    display: flex;
+    @media screen and (min-width: 768px) {
+      display: none;
     }
-    &:hover {
-      box-shadow: none;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    > button {
+      border: none;
+      background: none;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      > img {
+        width: 40px;
+      }
+      &:hover {
+        box-shadow: none;
+      }
     }
   }
 `;
@@ -97,12 +99,6 @@ export const Card = styled.div`
           box-shadow: none;
         }
       }
-      /*      > button:first-child {
-        margin: 10px -85px 10px auto;
-      }
-      > button:last-child {
-        margin: 10px auto 10px -85px;
-      }*/
     }
   }
   > div#author {

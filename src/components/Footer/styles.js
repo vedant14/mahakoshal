@@ -57,6 +57,10 @@ export const Wrapper = styled.div`
         }
         > div#address {
             grid-area: address;
+            > ul > li {
+                font-weight: 500;
+                color: ${colors.washedBlack};
+            }
         }
     }
     > div#growth {

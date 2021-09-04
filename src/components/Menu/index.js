@@ -23,7 +23,9 @@ export function Menu({ items }) {
 		<Nav>
 			{items.map((item) => (
 				<li key={item.id} className="nav-link">
-					<Link to={item.url}>{item.name}</Link>
+					<Link to={item.url} activeClassName="active">
+						{item.name}
+					</Link>
 					{item.childrenLinks && (
 						<div className="floating">
 							{item.childrenLinks.map((item) => (
