@@ -104,7 +104,8 @@ export const GlobalStyles = createGlobalStyle`
   a {
     font-weight: 500;
     text-decoration: none;
-    color: ${colors.primary};
+    color: ${colors.brandBlue};
+    line-height: initial;
     &:hover {
       text-decoration: none; 
     }
@@ -115,7 +116,7 @@ export const GlobalStyles = createGlobalStyle`
     border: none;
     transition: 0.5s;
     &:hover {
-        box-shadow: 4px 5px 8px ${colors.darkGrey};
+        box-shadow: 4px 5px 3px ${colors.darkGrey};
     }
   }
   .active {
