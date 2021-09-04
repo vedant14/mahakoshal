@@ -69,10 +69,10 @@ export const Card = styled.div`
         }
       }
       > button:first-child {
-        margin: 10px -15px 10px auto;
+        margin: 10px -85px 10px auto;
       }
       > button:last-child {
-        margin: 10px auto 10px -15px;
+        margin: 10px auto 10px -85px;
       }
     }
   }

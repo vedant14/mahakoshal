@@ -53,7 +53,7 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  h3{
+  h3, button{
     font-family: 'Mulish', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -112,19 +112,22 @@ export const GlobalStyles = createGlobalStyle`
 
   button {
     background: ${colors.white};
-    border: 1px solid ${colors.primary};
     cursor: pointer;
-    padding: 10px 14px;
-    color: ${colors.primary};
-    font-family: Inter;
+    border: none;
+    padding: 20px 50px;
+    color: ${colors.brandBlue};
     font-style: normal;
     font-weight: 600;
-    border-radius: 10px;
     margin: 5px 10px 5px 0px;
+        transition: 0.5s;
     @media screen and (min-width: 768px) {
       font-size: 18px;
-      padding: 10px 20px;
+      padding: 10px 100px;
       margin: 10px 30px 10px 0px;
+    }
+
+    &:hover {
+        box-shadow: 4px 5px 8px ${colors.darkGrey};
     }
   }
   .active {

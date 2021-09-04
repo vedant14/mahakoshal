@@ -1,6 +1,7 @@
 import React from "react";
 import { Wrapper } from "./styles";
 import { useStaticQuery, graphql } from "gatsby";
+import { Background } from "../Background";
 
 export function Stats() {
   const data = useStaticQuery(graphql`
@@ -19,18 +20,20 @@ export function Stats() {
     }
   `);
   return (
-    <Wrapper>
-      <div id="Grid" className="Container">
-        {data.allGraphCmsStatistic.nodes.map((item) => (
-          <div key={item.id}>
-            <div>
-              <span id="title">{item.title}</span>
-              <h2>{item.description}</h2>
+    <Background>
+      <Wrapper>
+        <div id="Grid" className="Container">
+          {data.allGraphCmsStatistic.nodes.map((item) => (
+            <div key={item.id}>
+              <div>
+                <span id="title">{item.title}</span>
+                <h2>{item.description}</h2>
+              </div>
+              <p>{item.paragraph}</p>
             </div>
-            <p>{item.paragraph}</p>
-          </div>
-        ))}
-      </div>
-    </Wrapper>
+          ))}
+        </div>
+      </Wrapper>
+    </Background>
   );
 }

@@ -8,6 +8,8 @@ import {
   News,
   Testimony,
   ProductsGrid,
+  ContactUsButton,
+  Footer,
 } from "../components";
 
 const IndexPage = () => {
@@ -20,6 +22,8 @@ const IndexPage = () => {
       <News />
       <Testimony />
       <ProductsGrid />
+      <ContactUsButton />
+      <Footer />
     </Layout>
   );
 };

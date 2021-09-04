@@ -24,6 +24,20 @@ export const Wrapper = styled.div`
         @media screen and (min-width: 1024px) {
             grid-column: 1;
         }
+        > button {
+            background: ${colors.lightBlue};
+            padding: 10px 20px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            > h4 {
+                margin: 0px;
+            }
+            > img {
+                width: 30px;
+                margin-left: 5px;
+            }
+        }
     }
 `;
 
