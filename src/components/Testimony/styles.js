@@ -12,6 +12,26 @@ export const Wrapper = styled.div`
     margin-top: 0;
     margin-bottom: 55px;
   }
+  > div#mobile-button {
+  display: flex;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  > button {
+    border: none;
+    background: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    > img {
+      width: 40px;
+    }
+    &:hover {
+      box-shadow: none;
+    }
+  }
 `;
 
 export const Card = styled.div`
@@ -58,9 +78,12 @@ export const Card = styled.div`
       }
     }
     > div#button {
+      display: none;
+      @media screen and (min-width: 768px) {
+        display: flex;
+      }
       position: relative;
       width: 100%;
-      display: flex;
       justify-content: center;
       > button {
         border: none;
@@ -88,7 +111,7 @@ export const Card = styled.div`
     position: relative;
     padding: 20px 40px;
     width: 70%;
-    margin: -20px auto;
+    margin: 0px auto;
     @media screen and (min-width: 1024px) {
       top: 20%;
       right: 0;

@@ -76,6 +76,14 @@ export function Testimony() {
           </h4>
         </div>
       </Card>
+      <div id="mobile-button">
+        <button onClick={() => handlePrevTestimonial({ currentTestimonial })}>
+          <img src={ArrowLeft} alt="arrow-left" />
+        </button>
+        <button onClick={() => handleNextTestimonial({ currentTestimonial })}>
+          <img src={ArrowRight} alt="arrow-right" />
+        </button>
+      </div>
     </Wrapper>
   );
 }
