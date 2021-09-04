@@ -61,19 +61,25 @@ export const Card = styled.div`
       position: relative;
       width: 100%;
       display: flex;
+      justify-content: center;
       > button {
         border: none;
         background: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
         > img {
           width: 40px;
         }
+        &:hover {
+          box-shadow: none;
+        }
       }
-      > button:first-child {
+      /*      > button:first-child {
         margin: 10px -85px 10px auto;
       }
       > button:last-child {
         margin: 10px auto 10px -85px;
-      }
+      }*/
     }
   }
   > div#author {

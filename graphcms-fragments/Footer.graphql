@@ -5,6 +5,7 @@ fragment Footer on Footer {
   updatedAt
   publishedAt
   heading
+  aboutCompany
   company
   product
   address

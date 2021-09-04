@@ -27,11 +27,13 @@ export const Wrapper = styled.div`
         > button {
             background: ${colors.lightBlue};
             padding: 10px 20px;
+            margin-top: 20px;
             border-radius: 4px;
             display: flex;
             align-items: center;
             > h4 {
                 margin: 0px;
+                color: ${colors.brandBlue};
             }
             > img {
                 width: 30px;

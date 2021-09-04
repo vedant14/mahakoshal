@@ -111,21 +111,9 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   button {
-    background: ${colors.white};
     cursor: pointer;
     border: none;
-    padding: 20px 50px;
-    color: ${colors.brandBlue};
-    font-style: normal;
-    font-weight: 600;
-    margin: 5px 10px 5px 0px;
-        transition: 0.5s;
-    @media screen and (min-width: 768px) {
-      font-size: 18px;
-      padding: 10px 100px;
-      margin: 10px 30px 10px 0px;
-    }
-
+    transition: 0.5s;
     &:hover {
         box-shadow: 4px 5px 8px ${colors.darkGrey};
     }

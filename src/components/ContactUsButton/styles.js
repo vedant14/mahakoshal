@@ -9,6 +9,14 @@ export const Wrapper = styled.div`
         text-align: center;
         > button {
             margin: 20px auto;
+            background: ${colors.white};
+            padding: 20px 50px;
+            color: ${colors.brandBlue};
+
+            transition: 0.5s;
+            @media screen and (min-width: 768px) {
+                padding: 10px 100px;
+            }
         }
     }
     > h2 {

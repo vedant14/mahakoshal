@@ -29,7 +29,7 @@ export const Wrapper = styled.div`
       left: 40%;
     }
     @media screen and (min-width: 1024px) {
-      left: -2%;
+      left: -4%;
     }
   }
   .right-arrow {

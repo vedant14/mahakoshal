@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { colors } from "../../styles/GlobalStyles";
-import BackgroundImage from "../../images/Landing/bg.png";
 
 export const Wrapper = styled.div`
   overflow: hidden;
