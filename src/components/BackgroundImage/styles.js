@@ -11,6 +11,9 @@ export const BackgroundWrapper = styled.div`
     overflow: hidden;
     min-height: 40vh;
     @media screen and (min-width: 768px) {
+        height: 70vh;
+    }
+    @media screen and (min-width: 1920px) {
         height: 60vh;
     }
     > div {
@@ -22,8 +25,13 @@ export const BackgroundWrapper = styled.div`
             props.image ? `${colors.lightBlue}` : `${colors.white}`};
         > div {
             position: absolute;
+            @media screen and (min-width: 1920px) {
+                left: 25%;
+            }
             top: 30%;
             width: 50%;
+            color: ${(props) =>
+                props.image ? `${colors.white}` : `${colors.primaryBlack}`};
         }
     }
 `;

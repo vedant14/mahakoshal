@@ -8,7 +8,8 @@ export const Wrapper = styled.div`
 		@media screen and (min-width: 768px) {
 			width: 70%;
 		}
-		text-align: center;
+
+		text-align: ${(props) => (props.center === true ? `center` : `left`)};
 		margin: 80px auto;
 	}
 `;

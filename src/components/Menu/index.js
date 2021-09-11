@@ -23,14 +23,23 @@ export function Menu({ items }) {
 		<Nav>
 			{items.map((item) => (
 				<li key={item.id} className="nav-link">
-					<Link to={item.url} activeClassName="active">
+					<Link
+						to={item.url}
+						activeClassName="active"
+						className="hover-effect-100"
+					>
 						{item.name}
 					</Link>
 					{item.childrenLinks && (
 						<div className="floating">
 							{item.childrenLinks.map((item) => (
 								<p key={item.id} className="nav-link">
-									<Link to={item.link}>{item.name}</Link>
+									<Link
+										className="hover-effect"
+										to={item.link}
+									>
+										{item.name}
+									</Link>
 								</p>
 							))}
 						</div>
@@ -50,9 +59,8 @@ export function Menu({ items }) {
 															className="nav-link"
 														>
 															<Link
-																to={
-																	product.productLink
-																}
+																className="hover-effect"
+																to={`/products/${product.productLink}`}
 															>
 																{
 																	product.productName

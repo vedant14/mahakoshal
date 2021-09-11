@@ -23,42 +23,42 @@ export function Team() {
         {data.allGraphCmsTeam.nodes.map((item) => (
           <>
             <TeamCard>
-              <img src={item.profileImage.url} alt="image" />
+              <img src={item.profileImage.url} alt={item.name} />
               <h3>{item.name}</h3>
               <small>{item.designation}</small>
             </TeamCard>
             <TeamCard>
-              <img src={item.profileImage.url} alt="image" />
+              <img src={item.profileImage.url} alt={item.name} />
               <h3>{item.name}</h3>
               <small>{item.designation}</small>
             </TeamCard>
             <TeamCard>
-              <img src={item.profileImage.url} alt="image" />
+              <img src={item.profileImage.url} alt={item.name} />
               <h3>{item.name}</h3>
               <small>{item.designation}</small>
             </TeamCard>
             <TeamCard>
-              <img src={item.profileImage.url} alt="image" />
+              <img src={item.profileImage.url} alt={item.name} />
               <h3>{item.name}</h3>
               <small>{item.designation}</small>
             </TeamCard>
             <TeamCard>
-              <img src={item.profileImage.url} alt="image" />
+              <img src={item.profileImage.url} alt={item.name} />
               <h3>{item.name}</h3>
               <small>{item.designation}</small>
             </TeamCard>
             <TeamCard>
-              <img src={item.profileImage.url} alt="image" />
+              <img src={item.profileImage.url} alt={item.name} />
               <h3>{item.name}</h3>
               <small>{item.designation}</small>
             </TeamCard>
             <TeamCard>
-              <img src={item.profileImage.url} alt="image" />
+              <img src={item.profileImage.url} alt={item.name} />
               <h3>{item.name}</h3>
               <small>{item.designation}</small>
             </TeamCard>
             <TeamCard>
-              <img src={item.profileImage.url} alt="image" />
+              <img src={item.profileImage.url} alt={item.name} />
               <h3>{item.name}</h3>
               <small>{item.designation}</small>
             </TeamCard>

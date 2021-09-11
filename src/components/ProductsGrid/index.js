@@ -1,9 +1,9 @@
 import React from "react";
 import { Wrapper, Card } from "./styles";
-import { useStaticQuery, graphql } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 
 import BoxArrow from "../../images/Landing/right-arrow-box.png";
-export function ProductsGrid() {
+export function ProductsGrid({ title }) {
     const data = useStaticQuery(graphql`
         {
             allGraphCmsProduct(
@@ -23,16 +23,20 @@ export function ProductsGrid() {
     `);
     return (
         <Wrapper className="Container">
-            <div id="title">
-                <h1>Our Products</h1>
-                <h3>
-                    Trusted products by industry standards and tested thouroghly
-                </h3>
-                <button className="primary-button button">
-                    <h4>See all</h4>
-                    <img src={BoxArrow} alt="arrow" />
-                </button>
-            </div>
+            {title === true && (
+                <div id="title">
+                    <h1>Our Products</h1>
+                    <h3>
+                        Trusted products by industry standards and tested
+                        thouroghly
+                    </h3>
+
+                    <Link to="/products" className="primary-button button">
+                        <h4>See all</h4>
+                        <img src={BoxArrow} alt="arrow" />
+                    </Link>
+                </div>
+            )}
             {data.allGraphCmsProduct.nodes.map((item) => (
                 <Card to={`/products/${item.productLink}`}>
                     <img

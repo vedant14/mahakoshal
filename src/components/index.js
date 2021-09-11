@@ -8,7 +8,7 @@ export * from "./Testimony";
 export * from "./ProductsGrid";
 export * from "./CtaCard";
 export * from "./Footer";
-export * from "./AboutUs";
+export * from "./PageContent";
 export * from "./Team";
 export * from "./BackgroundImage";
 export * from "./JobTable";

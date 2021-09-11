@@ -21,7 +21,7 @@ const IndexPage = () => {
       <Stats />
       <News />
       <Testimony />
-      <ProductsGrid />
+      <ProductsGrid title={true} />
       <CtaCard
         head="Interested in securing our services?"
         subHead="Please fill out this form and our team will reach out to

@@ -3,7 +3,7 @@ import { BackgroundWrapper } from "./styles";
 
 export function BackgroundImage({ imageUrl, children }) {
     return (
-        <BackgroundWrapper image={imageUrl} col="blue">
+        <BackgroundWrapper image={imageUrl}>
             <div>
                 <div className="Container">{children}</div>
             </div>

@@ -60,8 +60,8 @@ fragment Asset on Asset {
       stage
     }
   }
-  backgroundImageAboutPage {
-    ... on AboutPage {
+  backgroundImagePageData {
+    ... on PageData {
       remoteTypeName: __typename
       remoteId: id
       stage

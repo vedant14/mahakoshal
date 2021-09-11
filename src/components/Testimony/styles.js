@@ -22,6 +22,7 @@ export const Wrapper = styled.div`
     width: 100%;
     justify-content: center;
     > button {
+      cursor: pointer;
       border: none;
       background: none;
       margin-top: 10px;
@@ -94,6 +95,7 @@ export const Card = styled.div`
         margin-bottom: 10px;
         > img {
           width: 40px;
+          cursor: pointer;
         }
         &:hover {
           box-shadow: none;

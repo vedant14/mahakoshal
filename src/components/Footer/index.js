@@ -32,7 +32,9 @@ export function Footer() {
                     <ul>
                         {data.graphCmsFooter.company.map((item) => (
                             <li key={item.id}>
-                                <Link to={item.link}>{item.name}</Link>
+                                <Link className="hover-effect" to={item.link}>
+                                    {item.name}
+                                </Link>
                             </li>
                         ))}
                     </ul>
@@ -42,7 +44,9 @@ export function Footer() {
                     <ul>
                         {data.graphCmsFooter.product.map((item) => (
                             <li key={item.id}>
-                                <Link to={item.link}>{item.name}</Link>
+                                <Link className="hover-effect" to={item.link}>
+                                    {item.name}
+                                </Link>
                             </li>
                         ))}
                     </ul>

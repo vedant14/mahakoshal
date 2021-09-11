@@ -1,4 +1,4 @@
-fragment AboutPage on AboutPage {
+fragment PageData on PageData {
   stage
   remoteId: id
   createdAt
@@ -41,4 +41,5 @@ fragment AboutPage on AboutPage {
       stage
     }
   }
+  pageType
 }

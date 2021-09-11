@@ -3,6 +3,7 @@ import { colors } from "../../styles/GlobalStyles";
 import { Link } from "gatsby";
 export const Wrapper = styled.div`
     margin-top: 100px;
+    margin-bottom: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
@@ -24,10 +25,11 @@ export const Wrapper = styled.div`
         @media screen and (min-width: 1024px) {
             grid-column: 1;
         }
-        > button {
+        > a {
             background: ${colors.brandBlue};
             padding: 10px 20px;
             margin-top: 20px;
+            width: fit-content;
             border-radius: 4px;
             display: flex;
             align-items: center;

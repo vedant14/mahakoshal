@@ -111,6 +111,28 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  .hover-effect::after, .hover-effect-100::after{
+    content: '';
+    display: block;
+    width: 0;
+    margin-top: 3px;
+    height: 3px;
+    background: ${colors.brandRed};
+    transition: width .5s;
+  }
+
+
+  .hover-effect:hover::after {
+    width: 50%;
+    /*//transition: width .3s;*/
+  }
+
+
+  .hover-effect-100:hover::after {
+    width: 100%;
+    /*//transition: width .3s;*/
+  }
+
   button {
     border: none;
   }
@@ -154,9 +176,17 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .active {
-    padding-bottom: 4px;
     color: ${colors.primaryBlack} !important;
-    border-bottom: 3px solid ${colors.brandRed};
+  }
+
+  .active::after{
+    content: '';
+    margin-top: 3px;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: ${colors.brandRed};
+    transition: width .5s;
   }
 
   .brandRed{
@@ -196,6 +226,32 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     height: 100%;
   }
+
+
+  .slide-in-section {
+    opacity: 0;
+    transform: translateX(-20vh);
+    visibility: hidden;
+    will-change: opacity, visibility;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition-delay: 0.1s
+  }
+
+  .is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+
+    .fade-in-slow-section {
+    opacity: 0;
+    transform: translateY(10vh);
+    visibility: hidden;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    will-change: opacity, visibility;
+    transition-delay: 0.5s;
+  }
+  
 
   table {
     border: 1px solid ${colors.darkGrey};
