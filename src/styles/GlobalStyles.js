@@ -18,6 +18,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     background-color: ${colors.white}; 
+    font-family: 'Mulish', sans-serif;
     margin: 0;
     padding: 0;
   }
@@ -30,7 +31,6 @@ export const GlobalStyles = createGlobalStyle`
 
 
   h1{
-    font-family: 'Mulish', sans-serif;    
     font-style: normal;
     font-weight: 800;
     font-size: 32px;
@@ -42,7 +42,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h2{
-    font-family: 'Mulish', sans-serif;    
     font-style: normal;
     font-weight: bold;
     font-size: 28px;
@@ -53,8 +52,7 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  h3, button{
-    font-family: 'Mulish', sans-serif;
+  h3{
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -66,7 +64,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h4{
-    font-family: 'Mulish', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -77,8 +74,7 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  p, a, li, th, td {
-    font-family: 'Mulish', sans-serif;
+  p, a, li, th, td, label, input, textarea {
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
@@ -94,7 +90,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   small{
-    font-family: 'Mulish', sans-serif;
     font-style: normal;
     font-weight: normal;
     text-transform: uppercase;
@@ -144,7 +139,6 @@ export const GlobalStyles = createGlobalStyle`
   .button {
     cursor: pointer;
     transition: 0.5s;
-    font-family: 'Mulish', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;

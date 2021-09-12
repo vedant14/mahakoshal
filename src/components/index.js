@@ -14,3 +14,5 @@ export * from "./BackgroundImage";
 export * from "./JobTable";
 export * from "./ProductHead";
 export * from "./ProductTable";
+export * from "./ContactForm";
+export * from "./Map";
