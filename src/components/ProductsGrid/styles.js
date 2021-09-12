@@ -33,10 +33,7 @@ export const Wrapper = styled.div`
             border-radius: 4px;
             display: flex;
             align-items: center;
-            > h4 {
-                margin: 0px;
-                color: ${colors.white};
-            }
+            color: ${colors.white};
             > img {
                 width: 30px;
                 margin-left: 5px;

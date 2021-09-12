@@ -32,7 +32,7 @@ export function ProductsGrid({ title }) {
                     </h3>
 
                     <Link to="/products" className="primary-button button">
-                        <h4>See all</h4>
+                        See all
                         <img src={BoxArrow} alt="arrow" />
                     </Link>
                 </div>

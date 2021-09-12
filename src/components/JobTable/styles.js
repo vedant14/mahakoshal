@@ -6,5 +6,8 @@ export const Wrapper = styled.div`
     margin-bottom: 100px;
     > div {
         overflow-x: auto;
+        > table {
+            width: 80%;
+        }
     }
 `;

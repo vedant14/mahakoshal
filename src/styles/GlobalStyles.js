@@ -89,6 +89,10 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  li {
+    margin-top: 10px;
+  }
+
   small{
     font-family: 'Mulish', sans-serif;
     font-style: normal;
@@ -140,19 +144,22 @@ export const GlobalStyles = createGlobalStyle`
   .button {
     cursor: pointer;
     transition: 0.5s;
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+      line-height: 20px;
+    }
     &:hover {
         box-shadow: 4px 5px 3px ${colors.darkGrey};
     }
   }
 
-  .primary-button, .secondary-button {
+  .primary-button, .secondary-button, .third-button {
     padding: 15px 40px;
-    > a {
-      font-size: 18px;
-    }
-    line-height: 20px;
-    font-weight: bold;
-    font-style: normal;
     border-radius: 4px;
   }
 
@@ -160,19 +167,16 @@ export const GlobalStyles = createGlobalStyle`
   .primary-button{
     color: ${colors.white};
     background: ${colors.brandBlue};
-    &:hover{
-      color: ${colors.brandBlue};
-      background: ${colors.lightBlue};
-    }
   }
 
   .secondary-button{
     color: ${colors.brandBlue};
     background: ${colors.white};
-    &:hover{
-      color: ${colors.white};
-      background: ${colors.brandBlue};
-    }
+  }
+
+  .third-button{
+    background: ${colors.lightBlue};
+    color: ${colors.brandBlue}; 
   }
 
   .active {
@@ -259,11 +263,14 @@ export const GlobalStyles = createGlobalStyle`
     margin: 10px auto;
     border-collapse: collapse;
     text-align: center;
-    width: 80%;
-    > tr > th{
-      background: ${colors.lightBlue};
+    > tr, > tbody > tr {
+        border-bottom: 1px solid ${colors.darkGrey};
     }
-     > tr > th , > tr > td{
+    > tr > th{
+      background: ${colors.brandBlue};
+      color: ${colors.white};
+    }
+     > tr > th , > tr > td {
         padding: 25px 30px;
         > a {
           color: ${colors.brandBlue};

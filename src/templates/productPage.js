@@ -1,6 +1,13 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Layout, SEO, BackgroundImage, Footer } from "../components";
+import {
+	Layout,
+	SEO,
+	ProductHead,
+	ProductTable,
+	CtaCard,
+	Footer,
+} from "../components";
 
 const JobPage = ({ data }) => {
 	return (
@@ -10,7 +17,22 @@ const JobPage = ({ data }) => {
 				description="Product manager tests"
 				pathname="home"
 			/>
-			{data.graphCmsProduct.productName}
+			<ProductHead
+				images={data.graphCmsProduct.productImages}
+				title={data.graphCmsProduct.productName}
+				description={data.graphCmsProduct.description}
+			/>
+			<ProductTable
+				tableData={data.graphCmsProduct.productTable.html}
+				htmlContent={data.graphCmsProduct.productNotes.html}
+			/>
+			<CtaCard
+				head={`Interested in ${data.graphCmsProduct.productName}?`}
+				subHead="Please fill out this form and our team will reach out to
+                        you at the earliest."
+				btnText="Contact Us"
+				btnLink="/contact-us"
+			/>
 			<Footer />
 		</Layout>
 	);
@@ -23,7 +45,16 @@ export const query = graphql`
 		graphCmsProduct(id: { eq: $id }) {
 			id
 			productName
-			productLink
+			description
+			productTable {
+				html
+			}
+			productNotes {
+				html
+			}
+			productImages {
+				url
+			}
 		}
 	}
 `;

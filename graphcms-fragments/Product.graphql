@@ -8,6 +8,22 @@ fragment Product on Product {
   cardDescription
   description
   productLink
+  productNotes {
+    ... on RichText {
+      raw
+      html
+      markdown
+      text
+    }
+  }
+  productTable {
+    ... on RichText {
+      raw
+      html
+      markdown
+      text
+    }
+  }
   createdBy {
     ... on User {
       remoteTypeName: __typename

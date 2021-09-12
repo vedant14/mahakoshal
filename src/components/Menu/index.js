@@ -79,9 +79,9 @@ export function Menu({ items }) {
 				</li>
 			))}
 			<li>
-				<button className="primary-button button">
-					<Link to="/contact-us">Contact Us</Link>
-				</button>
+				<Link to="/contact-us" className="primary-button button">
+					Contact Us
+				</Link>
 			</li>
 		</Nav>
 	);

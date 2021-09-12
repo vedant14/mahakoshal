@@ -12,3 +12,5 @@ export * from "./PageContent";
 export * from "./Team";
 export * from "./BackgroundImage";
 export * from "./JobTable";
+export * from "./ProductHead";
+export * from "./ProductTable";
