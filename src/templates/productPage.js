@@ -21,6 +21,7 @@ const JobPage = ({ data }) => {
 				images={data.graphCmsProduct.productImages}
 				title={data.graphCmsProduct.productName}
 				description={data.graphCmsProduct.description}
+				downloadData={data.graphCmsProduct.downloadData}
 			/>
 			<ProductTable
 				tableData={data.graphCmsProduct.productTable.html}
@@ -46,6 +47,7 @@ export const query = graphql`
 			id
 			productName
 			description
+			downloadData
 			productTable {
 				html
 			}

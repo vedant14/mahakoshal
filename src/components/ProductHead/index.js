@@ -3,7 +3,7 @@ import ImageGallery from "react-image-gallery";
 import { Wrapper } from "./styles";
 import { Link } from "gatsby";
 
-export function ProductHead({ images, title, description }) {
+export function ProductHead({ images, title, description, downloadData }) {
   let imageArray = [];
   images.map((image) =>
     imageArray.push({ original: image.url, thumbnail: image.url })
@@ -17,27 +17,24 @@ export function ProductHead({ images, title, description }) {
       </div>
       <div id="grid">
         <ImageGallery
+          id="image-gallery"
           items={imageArray}
           showPlayButton={false}
           lazyLoad={true}
-          showNav={false}
-          thumbnailClass="thumbnail"
+          showNav={true}
+          infinite={false}
         />
         <div id="description">
           <h2>{title}</h2>
           <p>{description}</p>
           <div id="buttons">
+            <Link to="/contact-us" className="button primary-button">
+              Get Quotation
+            </Link>
             <a
-              href="https://www.google.com"
+              href={downloadData}
               target="_blank"
-              className="button primary-button"
-            >
-              Get Quoatation
-            </a>
-
-            <a
-              href="https://www.google.com"
-              target="_blank"
+              rel="noreferrer"
               className="button third-button"
             >
               Download Data

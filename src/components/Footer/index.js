@@ -61,7 +61,7 @@ export function Footer() {
             <div id="growth">
                 <img
                     src={data.graphCmsFooter.growthStoryImage.url}
-                    alt="image"
+                    alt="growth-image"
                 />
             </div>
         </Wrapper>

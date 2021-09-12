@@ -1,6 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
 import { colors } from "../../styles/GlobalStyles";
-import { Link } from "gatsby";
 export const OverrideGlobalStyle = createGlobalStyle`
   body {
     overflow: ${(props) => (props.menuOpen ? "hidden" : "auto")}

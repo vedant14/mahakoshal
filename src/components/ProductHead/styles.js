@@ -24,6 +24,9 @@ export const Wrapper = styled.div`
         @media screen and (min-width: 768px) {
             grid-template-columns: 1fr 1fr;
         }
+        > div#image-gallery {
+            overflow-x: auto;
+        }
         > div {
             > h2 {
                 margin-top: 0px;
@@ -49,8 +52,12 @@ export const Wrapper = styled.div`
                 }
             }
         }
-        .image-gallery-thumbnails-container {
-            text-align: left;
+
+        .image-gallery-thumbnails {
+            width: 250px;
+            @media screen and (min-width: 768px) {
+                width: 500px;
+            }
         }
     }
 `;

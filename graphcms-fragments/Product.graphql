@@ -24,6 +24,7 @@ fragment Product on Product {
       text
     }
   }
+  downloadData
   createdBy {
     ... on User {
       remoteTypeName: __typename

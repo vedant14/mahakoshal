@@ -5,6 +5,7 @@ fragment Nav on Nav {
   updatedAt
   publishedAt
   name
+  position
   url
   childrenLinks
   createdBy {
