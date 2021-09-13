@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { Layout, SEO, BackgroundImage, Footer } from "../components";
 
-const JobPage = ({ data }) => {
+const JobTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO
@@ -34,7 +34,7 @@ const JobPage = ({ data }) => {
   );
 };
 
-export default JobPage;
+export default JobTemplate;
 
 export const query = graphql`
   query JobQuery($id: String!) {

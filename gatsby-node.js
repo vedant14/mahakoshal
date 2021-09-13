@@ -27,7 +27,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 
   data.allGraphCmsCareer.nodes.forEach((job) => {
     createPage({
-      component: path.resolve("./src/templates/jobPage.js"),
+      component: path.resolve("./src/templates/jobTemplate.js"),
       context: {
         id: job.id,
         // job,
@@ -38,7 +38,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 
   data.allGraphCmsProduct.nodes.forEach((product) => {
     createPage({
-      component: path.resolve("./src/templates/productPage.js"),
+      component: path.resolve("./src/templates/productTemplate.js"),
       context: {
         id: product.id,
       },

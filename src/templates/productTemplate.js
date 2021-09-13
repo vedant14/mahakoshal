@@ -9,7 +9,7 @@ import {
 	Footer,
 } from "../components";
 
-const JobPage = ({ data }) => {
+const ProductTemplate = ({ data }) => {
 	return (
 		<Layout>
 			<SEO
@@ -39,7 +39,7 @@ const JobPage = ({ data }) => {
 	);
 };
 
-export default JobPage;
+export default ProductTemplate;
 
 export const query = graphql`
 	query ProductQuery($id: String!) {
