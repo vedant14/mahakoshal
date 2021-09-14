@@ -35,5 +35,4 @@ fragment Team on Team {
       stage
     }
   }
-  active
 }

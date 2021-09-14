@@ -6,10 +6,7 @@ import BoxArrow from "../../images/Landing/right-arrow-box.png";
 export function ProductsGrid({ title }) {
     const data = useStaticQuery(graphql`
         {
-            allGraphCmsProduct(
-                filter: { active: { eq: Yes } }
-                sort: { fields: publishedAt, order: DESC }
-            ) {
+            allGraphCmsProduct(sort: { fields: publishedAt, order: DESC }) {
                 nodes {
                     productName
                     productLink

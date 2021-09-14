@@ -18,6 +18,7 @@ export function JobTable() {
     `);
     return (
         <Wrapper className="Container">
+            {/* TODO: WHAT IF THERE ARE NO JOBS */}
             <div>
                 <table>
                     <tr>

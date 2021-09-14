@@ -61,5 +61,4 @@ fragment Product on Product {
       stage
     }
   }
-  active
 }
