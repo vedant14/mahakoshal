@@ -12,11 +12,10 @@ export const Wrapper = styled.div`
 	> div {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		grid-gap: 30px;
 		@media screen and (min-width: 768px) {
 			grid-template-columns: 1fr 1fr 1fr;
 		}
-
-		grid-gap: 30px;
 	}
 `;
 
