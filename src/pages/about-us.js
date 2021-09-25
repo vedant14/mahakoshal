@@ -6,6 +6,7 @@ import {
   PageContent,
   Team,
   CtaCard,
+  Certificates,
   Footer,
 } from "../components";
 import { graphql } from "gatsby";
@@ -23,6 +24,7 @@ const IndexPage = ({ data }) => {
         htmlContent={data.graphCmsPageData.content.html}
       />
       <Team />
+      <Certificates />
       <CtaCard
         head="Would you like to join the team?"
         subHead="Please fill this form and our team will reach out to you at the earliest."
