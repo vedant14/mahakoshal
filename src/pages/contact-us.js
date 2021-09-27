@@ -2,7 +2,7 @@ import React from "react";
 import { Layout, SEO, ContactForm, Map, Footer } from "../components";
 import { graphql } from "gatsby";
 
-const IndexPage = ({ data }) => {
+const ContactPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Contact Us" />
@@ -26,4 +26,4 @@ export const query = graphql`
   }
 `;
 
-export default IndexPage;
+export default ContactPage;

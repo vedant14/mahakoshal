@@ -7,7 +7,7 @@ export const colors = {
   brandBlue: "#3732AF",
   darkGrey: "#6D7D8B",
   white: "#FFFFFF",
-  lightBlue: "rgba(153, 149, 252, 0.2)",
+  lightBlue: "rgba(153, 149, 252, 0.3)",
 };
 
 export const GlobalStyles = createGlobalStyle`
@@ -44,7 +44,7 @@ export const GlobalStyles = createGlobalStyle`
   h2{
     font-style: normal;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 35px;
     @media screen and (min-width: 768px) {
       font-size: 32px;

@@ -11,7 +11,7 @@ import {
 } from "../components";
 import { graphql } from "gatsby";
 
-const IndexPage = ({ data }) => {
+const AboutPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="About Us" />
@@ -49,4 +49,4 @@ export const query = graphql`
   }
 `;
 
-export default IndexPage;
+export default AboutPage;

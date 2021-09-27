@@ -13,6 +13,8 @@ export const Wrapper = styled.div`
 		margin: 80px auto;
 		> img {
 			max-width: 100%;
+			object-fit: contain;
+			height: fit-content;
 		}
 	}
 `;

@@ -25,8 +25,13 @@ export const BackgroundWrapper = styled.div`
             props.image ? `${colors.lightBlue}` : `${colors.white}`};
         > div {
             position: absolute;
+            margin-top: 70px;
+            @media screen and (min-width: 768px) {
+                margin-top: 0px;
+            }
             @media screen and (min-width: 1920px) {
                 left: 25%;
+                margin-top: 0px;
             }
             top: 30%;
             width: 50%;
