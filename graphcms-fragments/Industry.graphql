@@ -1,13 +1,19 @@
-fragment Statistic on Statistic {
+fragment Industry on Industry {
   stage
   remoteId: id
   createdAt
   updatedAt
   publishedAt
-  title
-  position
-  description
-  paragraph
+  industryType
+  slug
+  pageContent {
+    ... on RichText {
+      raw
+      html
+      markdown
+      text
+    }
+  }
   createdBy {
     ... on User {
       remoteTypeName: __typename

@@ -1,13 +1,19 @@
-fragment Statistic on Statistic {
+fragment Facility on Facility {
   stage
   remoteId: id
   createdAt
   updatedAt
   publishedAt
-  title
-  position
-  description
-  paragraph
+  name
+  slug
+  content {
+    ... on RichText {
+      raw
+      html
+      markdown
+      text
+    }
+  }
   createdBy {
     ... on User {
       remoteTypeName: __typename
