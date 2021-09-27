@@ -7,9 +7,6 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         allGraphCmsCareer {
           nodes {
             id
-            jobName
-            location
-            experience
             jobLink
           }
         }
@@ -17,6 +14,12 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
           nodes {
             id
             productLink
+          }
+        }
+        allGraphCmsFacility {
+          nodes {
+            id
+            slug
           }
         }
       }
@@ -43,6 +46,16 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         id: product.id,
       },
       path: `products/${product.productLink}`,
+    });
+  });
+
+  data.allGraphCmsFacility.nodes.forEach((facility) => {
+    createPage({
+      component: path.resolve("./src/templates/facilityTemplate.js"),
+      context: {
+        id: facility.id,
+      },
+      path: `${facility.slug}`,
     });
   });
 };

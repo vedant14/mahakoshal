@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout, SEO, BackgroundImage, JobTable, Footer } from "../components";
 
-const IndexPage = () => {
+const CareersPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
@@ -18,4 +18,4 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default CareersPage;

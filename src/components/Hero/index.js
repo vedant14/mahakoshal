@@ -5,31 +5,31 @@ import { useStaticQuery, graphql } from "gatsby";
 export function Hero() {
   const HeroData = useStaticQuery(graphql`
     {
-      file(relativeDirectory: { eq: "Hero" }) {
-        name
-        publicURL
-        childImageSharp {
-          gatsbyImageData
+      graphCmsPageData(pageType: { eq: HeroPage }) {
+        id
+        backgroundImage {
+          url
         }
-      }
-      markdownRemark(frontmatter: { type: { eq: "hero" } }) {
-        frontmatter {
-          heroTitle
-          type
-          heroSubTitle
+        content {
+          html
         }
       }
     }
   `);
-  const text = HeroData.markdownRemark.frontmatter;
   return (
     <Wrapper>
       <div className="Overlay"></div>
-      <img src={HeroData.file.publicURL} alt="heo" className="BGImage" />
-      <div id="HeroText">
-        <h1>{text.heroTitle}</h1>
-        <h3>{text.heroSubTitle}</h3>
-      </div>
+      <img
+        src={HeroData.graphCmsPageData.backgroundImage.url}
+        alt="heo"
+        className="BGImage"
+      />
+      <div
+        id="HeroText"
+        dangerouslySetInnerHTML={{
+          __html: HeroData.graphCmsPageData.content.html,
+        }}
+      />
     </Wrapper>
   );
 }

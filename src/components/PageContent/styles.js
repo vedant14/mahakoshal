@@ -11,5 +11,10 @@ export const Wrapper = styled.div`
 
 		text-align: ${(props) => (props.center === true ? `center` : `left`)};
 		margin: 80px auto;
+		> img {
+			max-width: 100%;
+			object-fit: contain;
+			height: fit-content;
+		}
 	}
 `;
