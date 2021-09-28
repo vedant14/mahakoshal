@@ -17,3 +17,4 @@ export * from "./ProductTable";
 export * from "./ContactForm";
 export * from "./Map";
 export * from "./Certificates";
+export * from "./FacilityTab";

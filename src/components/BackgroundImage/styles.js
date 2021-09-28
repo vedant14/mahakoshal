@@ -11,10 +11,10 @@ export const BackgroundWrapper = styled.div`
     overflow: hidden;
     min-height: 40vh;
     @media screen and (min-width: 768px) {
-        height: 70vh;
+        height: ${(props) => (props.image ? `70vh` : `50vh`)};
     }
     @media screen and (min-width: 1920px) {
-        height: 60vh;
+        height: ${(props) => (props.image ? `50vh` : `20vh`)};
     }
     > div {
         position: relative;
@@ -24,7 +24,7 @@ export const BackgroundWrapper = styled.div`
         background-color: ${(props) =>
             props.image ? `${colors.lightBlue}` : `${colors.white}`};
         > div {
-            position: absolute;
+            position: ${(props) => (props.image ? `absolute` : `relative`)};
             margin-top: 70px;
             @media screen and (min-width: 768px) {
                 margin-top: 0px;

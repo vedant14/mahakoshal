@@ -83,22 +83,6 @@ export function Menu({ items }) {
 							</div>
 						</div>
 					)}
-					{item.id === "Nav:cksy6edqo9ebk0c37b6jebsbm:PUBLISHED" && (
-						<div className="floating ">
-							{data.allGraphCmsFacility.nodes.map((item) => (
-								<div key={item.id}>
-									<p className="nav-link">
-										<Link
-											className="hover-effect"
-											to={`/${item.slug}`}
-										>
-											{item.name}
-										</Link>
-									</p>
-								</div>
-							))}
-						</div>
-					)}
 				</li>
 			))}
 			<li>

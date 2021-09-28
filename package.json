@@ -34,6 +34,7 @@
     "react-helmet": "^6.1.0",
     "react-image-gallery": "^1.2.7",
     "react-slick": "^0.28.1",
+    "react-tabs": "^3.2.2",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.1"
   }

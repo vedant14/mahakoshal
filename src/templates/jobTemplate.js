@@ -23,7 +23,7 @@ const JobTemplate = ({ data }) => {
         dangerouslySetInnerHTML={{
           __html: data.graphCmsCareer.jobDescription.html,
         }}
-      ></div>
+      />
       <div style={{ margin: "80px auto", textAlign: "center" }}>
         <button className="primary-button button">
           <a href="www.goggle.com">Apply Now</a>

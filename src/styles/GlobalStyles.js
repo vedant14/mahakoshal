@@ -7,7 +7,7 @@ export const colors = {
   brandBlue: "#3732AF",
   darkGrey: "#6D7D8B",
   white: "#FFFFFF",
-  lightBlue: "rgba(153, 149, 252, 0.3)",
+  lightBlue: "rgba(153, 149, 252, 0.42)",
 };
 
 export const GlobalStyles = createGlobalStyle`
@@ -223,6 +223,28 @@ export const GlobalStyles = createGlobalStyle`
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  .react-tabs > ul{
+    text-align: center;
+  }
+
+  .tabs {
+    background: ${colors.lightBlue};
+    list-style: none;
+    display: inline-flex;
+    margin-right: 15px;
+    padding: 10px 25px;
+    border-radius: 2px;
+    border-top-right-radius: 10px !important;
+    cursor: pointer;
+    transition: .5s;
+  }
+
+
+  .active-tab {
+    background: ${colors.brandBlue};
+    color: ${colors.white};
   }
 
 
