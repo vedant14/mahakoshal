@@ -3,11 +3,11 @@ require("dotenv").config({
 });
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@vedantlohbare`,
-    keywords: ["gatsby", "starter"],
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Mahakoshal Refactories`,
+    description: `Refractories Manufacturer products like Fire clay, high alumina bricks & cement, castables, insulating bricks, Flow Control Products & Acid Resistant Bricks`,
+    author: `@mahakoshal`,
+    keywords: ["Refactories", "insulating bricks", "Acid Resistant Bricks"],
+    siteUrl: `https://mahakoshalrefractories.com/`,
   },
   plugins: [
     "gatsby-plugin-styled-components",

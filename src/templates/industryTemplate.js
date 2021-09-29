@@ -9,18 +9,18 @@ import {
 	Footer,
 } from "../components";
 
-const FacilityTemplate = ({ data }) => {
+const IndustryTemplate = ({ data }) => {
 	return (
 		<Layout>
 			<SEO
-				title={data.graphCmsFacility.name}
+				title={data.graphCmsIndustry.industryType}
 				description="Product manager tests"
 				pathname="home"
 			/>
-			<BackgroundImage>
-				<h1>{data.graphCmsFacility.name}</h1>
+			<BackgroundImage imageUrl={data.graphCmsIndustry.industryImage.url}>
+				<h1>{data.graphCmsIndustry.industryType}</h1>
 			</BackgroundImage>
-			<PageContent htmlContent={data.graphCmsFacility.content.html} />
+			<PageContent htmlContent={data.graphCmsIndustry.pageContent.html} />
 			<CtaCard
 				head="Interested in securing our services?"
 				subHead="Please fill out this form and our team will reach out to
@@ -33,15 +33,18 @@ const FacilityTemplate = ({ data }) => {
 	);
 };
 
-export default FacilityTemplate;
+export default IndustryTemplate;
 
 export const query = graphql`
-	query FacilityQuery($id: String!) {
-		graphCmsFacility(id: { eq: $id }) {
+	query IndustryQuery($id: String!) {
+		graphCmsIndustry(id: { eq: $id }) {
 			id
-			name
-			content {
+			industryType
+			pageContent {
 				html
+			}
+			industryImage {
+				url
 			}
 		}
 	}

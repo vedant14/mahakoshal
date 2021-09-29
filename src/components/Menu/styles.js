@@ -68,7 +68,8 @@ export const Nav = styled.div`
     }
   }
   .nav-link {
-    > a {
+    > a,
+    span {
       color: ${colors.darkGrey};
       &:hover {
         color: ${colors.primaryBlack};

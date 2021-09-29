@@ -12,7 +12,7 @@ import { graphql } from "gatsby";
 const FacilityPage = ({ data }) => {
   return (
     <Layout>
-      <SEO title="About Us" />
+      <SEO title="Our Facilities" />
       <BackgroundImage imageUrl={data.graphCmsPageData.backgroundImage.url}>
         <div
           dangerouslySetInnerHTML={{

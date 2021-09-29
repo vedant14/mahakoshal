@@ -100,7 +100,7 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  a {
+  a,span {
     font-weight: 500;
     text-decoration: none;
     line-height: initial;

@@ -16,6 +16,12 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
             productLink
           }
         }
+        allGraphCmsIndustry {
+          nodes {
+            id
+            slug
+          }
+        }
       }
     `
   );
@@ -40,6 +46,16 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         id: product.id,
       },
       path: `products/${product.productLink}`,
+    });
+  });
+
+  data.allGraphCmsIndustry.nodes.forEach((industry) => {
+    createPage({
+      component: path.resolve("./src/templates/industryTemplate.js"),
+      context: {
+        id: industry.id,
+      },
+      path: `${industry.slug}`,
     });
   });
 };

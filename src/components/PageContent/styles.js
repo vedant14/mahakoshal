@@ -15,6 +15,9 @@ export const Wrapper = styled.div`
 			max-width: 100%;
 			object-fit: contain;
 			height: fit-content;
+			text-align: center;
+			margin: auto;
+			align-self: center;
 		}
 	}
 `;

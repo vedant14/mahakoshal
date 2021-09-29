@@ -4,7 +4,7 @@ import { Layout, SEO, BackgroundImage, JobTable, Footer } from "../components";
 const CareersPage = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Careers" />
       <BackgroundImage>
         <h1>Join Us</h1>
         <h3>

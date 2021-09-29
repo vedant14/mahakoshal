@@ -17,11 +17,11 @@ export function Menu({ items }) {
 					}
 				}
 			}
-			allGraphCmsFacility {
+			allGraphCmsIndustry {
 				nodes {
 					id
-					name
 					slug
+					industryType
 				}
 			}
 		}
@@ -30,13 +30,17 @@ export function Menu({ items }) {
 		<Nav>
 			{items.map((item) => (
 				<li key={item.id} className="nav-link">
-					<Link
-						to={item.url}
-						activeClassName="active"
-						className="hover-effect-100"
-					>
-						{item.name}
-					</Link>
+					{item.id !== "Nav:cksy6evhk9d6d0b91tms0mu0l:PUBLISHED" ? (
+						<Link
+							to={item.url}
+							activeClassName="active"
+							className="hover-effect-100"
+						>
+							{item.name}
+						</Link>
+					) : (
+						<span>{item.name}</span>
+					)}
 					{item.childrenLinks && (
 						<div className="floating">
 							{item.childrenLinks.map((item) => (
@@ -80,6 +84,22 @@ export function Menu({ items }) {
 										</div>
 									)
 								)}
+							</div>
+						</div>
+					)}
+					{item.id === "Nav:cksy6evhk9d6d0b91tms0mu0l:PUBLISHED" && (
+						<div className="floating">
+							<div id="grid">
+								{data.allGraphCmsIndustry.nodes.map((item) => (
+									<p key={item.id}>
+										<Link
+											className="hover-effect"
+											to={`/${item.slug}`}
+										>
+											{item.industryType}
+										</Link>
+									</p>
+								))}
 							</div>
 						</div>
 					)}

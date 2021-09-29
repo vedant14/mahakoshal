@@ -35,4 +35,12 @@ fragment Industry on Industry {
       stage
     }
   }
+  industryImage {
+    ... on Asset {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
+      stage
+    }
+  }
 }
