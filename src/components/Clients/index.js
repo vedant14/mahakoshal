@@ -39,10 +39,13 @@ export function Clients() {
   };
   const ClientImages = useStaticQuery(graphql`
     {
-      allFile(filter: { relativeDirectory: { eq: "Clients" } }) {
+      allGraphCmsClient {
         nodes {
-          name
-          publicURL
+          id
+          clientLogo {
+            url
+            fileName
+          }
         }
       }
     }
@@ -54,11 +57,11 @@ export function Clients() {
         <span className="brandRed">50 years</span>
       </h4>
       <Slider {...settings}>
-        {ClientImages.allFile.nodes.map((image) => (
+        {ClientImages.allGraphCmsClient.nodes.map((image) => (
           <ClientImage
-            src={image.publicURL}
-            alt={image.name}
-            key={image.name}
+            src={image.clientLogo.url}
+            alt={image.clientLogo.fileName}
+            key={image.id}
           />
         ))}
       </Slider>

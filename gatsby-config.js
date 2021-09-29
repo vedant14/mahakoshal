@@ -37,13 +37,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: "./src/content/",
-      },
-    },
-    {
       resolve: `gatsby-source-graphcms`,
       options: {
         endpoint: process.env.GRAPHCMS_ENDPOINT,

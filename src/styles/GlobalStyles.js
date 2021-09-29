@@ -158,9 +158,9 @@ export const GlobalStyles = createGlobalStyle`
   }
 
 
-  .primary-button{
-    color: ${colors.white};
-    background: ${colors.brandBlue};
+  .primary-button, .active-button{
+    color: ${colors.white} !important;
+    background: ${colors.brandBlue} !important;
   }
 
   .secondary-button{
@@ -226,7 +226,9 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .react-tabs > ul{
-    text-align: center;
+    @media screen and (min-width: 768px) {
+      text-align: center;
+    }
   }
 
   .tabs {

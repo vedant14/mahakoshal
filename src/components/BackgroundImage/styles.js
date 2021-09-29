@@ -9,7 +9,7 @@ export const BackgroundWrapper = styled.div`
     background-size: cover; /* Resize the background image to cover the entire container */
     background-position: center; /* Center the image */
     overflow: hidden;
-    min-height: 40vh;
+    min-height: 50vh;
     @media screen and (min-width: 768px) {
         height: ${(props) => (props.image ? `70vh` : `50vh`)};
     }

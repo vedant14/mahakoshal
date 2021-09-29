@@ -74,5 +74,12 @@ fragment Asset on Asset {
       stage
     }
   }
+  clientLogoClient {
+    ... on Client {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
   url
 }
