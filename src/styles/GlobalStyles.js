@@ -251,22 +251,16 @@ export const GlobalStyles = createGlobalStyle`
   }
 
 
-  .slide-in-section {
+   .fade-in-section {
     opacity: 0;
-    transform: translateX(-20vh);
+    transform: translateY(10vh);
     visibility: hidden;
-    will-change: opacity, visibility;
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    transition-delay: 0.1s
+    will-change: opacity, visibility;
+    transition-delay: 0.5s;
   }
-
-  .is-visible {
-    opacity: 1;
-    transform: none;
-    visibility: visible;
-  }
-
-    .fade-in-slow-section {
+  
+  .fade-in-slow-section {
     opacity: 0;
     transform: translateY(10vh);
     visibility: hidden;
@@ -275,6 +269,19 @@ export const GlobalStyles = createGlobalStyle`
     transition-delay: 0.5s;
   }
   
+ .slide-in-section {
+    opacity: 0;
+    transform: translateX(-20vh);
+    visibility: hidden;
+    will-change: opacity, visibility;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+
+  .is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
 
   table {
     border: 1px solid ${colors.darkGrey};

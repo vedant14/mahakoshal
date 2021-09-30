@@ -32,6 +32,16 @@ function CustomPrevArrow(props) {
 }
 
 export function News() {
+  const [isVisible, setVisible] = React.useState(false);
+  const domRef = React.useRef();
+  React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => setVisible(entry.isIntersecting));
+    });
+    observer.observe(domRef.current);
+    return () => observer.unobserve(domRef.current);
+  }, []);
+
   const data = useStaticQuery(graphql`
     {
       allGraphCmsNewsArticle(sort: { order: DESC, fields: publishedAt }) {
@@ -76,7 +86,10 @@ export function News() {
     ],
   };
   return (
-    <Wrapper className="Container">
+    <Wrapper
+      className={`Container fade-in-section  ${isVisible ? "is-visible" : ""}`}
+      ref={domRef}
+    >
       <h1>Featured in News</h1>
       <Slider {...settings} className="custom-slide">
         {data.allGraphCmsNewsArticle.nodes.map((item) => (

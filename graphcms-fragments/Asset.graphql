@@ -81,5 +81,12 @@ fragment Asset on Asset {
       stage
     }
   }
+  industryImageIndustry {
+    ... on Industry {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
   url
 }

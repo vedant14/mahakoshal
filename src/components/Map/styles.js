@@ -8,14 +8,16 @@ export const Wrapper = styled.div`
         grid-template-columns: 1fr;
         grid-gap: 50px;
         > div#map {
-            height: 250px;
+            width: 100%;
+            overflow: hidden;
+
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
         }
         @media screen and (min-width: 768px) {
             grid-template-columns: 1.5fr 1fr;
-            > div#map {
-                width: 100%;
-                height: 500px;
-            }
         }
         > div#contact {
             > div {

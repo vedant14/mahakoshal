@@ -7,6 +7,16 @@ import ArrowLeft from "../../images/Landing/left-arrow.png";
 import ArrowRight from "../../images/Landing/right-arrow.png";
 
 export function Testimony() {
+  const [isVisible, setVisible] = React.useState(false);
+  const domRef = React.useRef();
+  React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => setVisible(entry.isIntersecting));
+    });
+    observer.observe(domRef.current);
+    return () => observer.unobserve(domRef.current);
+  }, []);
+
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const data = useStaticQuery(graphql`
     {
@@ -39,10 +49,13 @@ export function Testimony() {
   };
 
   return (
-    <Wrapper className="Container">
+    <Wrapper
+      className={`Container fade-in-section  ${isVisible ? "is-visible" : ""}`}
+      ref={domRef}
+    >
       <h1>For the past 50 years</h1>
       <p>We had the previledge to serve some very best customers</p>
-      <Card key={data.allGraphCmsTestimonial.nodes[0].id}>
+      <Card key={data.allGraphCmsTestimonial.nodes[currentTestimonial].id}>
         <div id="text">
           <h3>
             <img src={Comma} alt="Comma" />
