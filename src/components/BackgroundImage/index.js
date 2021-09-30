@@ -4,8 +4,10 @@ import { BackgroundWrapper } from "./styles";
 export function BackgroundImage({ imageUrl, children }) {
     return (
         <BackgroundWrapper image={imageUrl}>
-            <div>
-                <div className="Container">{children}</div>
+            <div id="position">
+                <div id="container" className="Container">
+                    {children}
+                </div>
             </div>
         </BackgroundWrapper>
     );

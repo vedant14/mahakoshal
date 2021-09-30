@@ -7,7 +7,8 @@ export const colors = {
   brandBlue: "#3732AF",
   darkGrey: "#6D7D8B",
   white: "#FFFFFF",
-  lightBlue: "rgba(153, 149, 252, 0.42)",
+  lightBlue: "rgba(153, 149, 252, 0.3)",
+  bggrey: "rgba(109, 125, 139, 0.62)",
 };
 
 export const GlobalStyles = createGlobalStyle`

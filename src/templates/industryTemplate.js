@@ -19,6 +19,9 @@ const IndustryTemplate = ({ data }) => {
 			/>
 			<BackgroundImage imageUrl={data.graphCmsIndustry.industryImage.url}>
 				<h1>{data.graphCmsIndustry.industryType}</h1>
+				<h3>
+					Innovative refactory solutions from concept to execution
+				</h3>
 			</BackgroundImage>
 			<PageContent htmlContent={data.graphCmsIndustry.pageContent.html} />
 			<CtaCard

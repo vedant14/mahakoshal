@@ -89,7 +89,7 @@ export function ProductsGrid({ title }) {
                 {filteredProducts?.map((item) => (
                     <ProductCard
                         key={item.id}
-                        link={item.productLink}
+                        link={`products/${item.productLink}`}
                         imageUrl={item.productImages[0].url}
                         name={item.productName}
                         description={item.cardDescription}

@@ -30,17 +30,13 @@ export function Menu({ items }) {
 		<Nav>
 			{items.map((item) => (
 				<li key={item.id} className="nav-link">
-					{item.id !== "Nav:cksy6evhk9d6d0b91tms0mu0l:PUBLISHED" ? (
-						<Link
-							to={item.url}
-							activeClassName="active"
-							className="hover-effect-100"
-						>
-							{item.name}
-						</Link>
-					) : (
-						<span>{item.name}</span>
-					)}
+					<Link
+						to={item.url}
+						activeClassName="active"
+						className="hover-effect-100"
+					>
+						{item.name}
+					</Link>
 					{item.childrenLinks && (
 						<div className="floating">
 							{item.childrenLinks.map((item) => (

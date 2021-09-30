@@ -18,3 +18,5 @@ export * from "./ContactForm";
 export * from "./Map";
 export * from "./Certificates";
 export * from "./FacilityTab";
+export * from "./ProductCard";
+export * from "./IndustryGrid";

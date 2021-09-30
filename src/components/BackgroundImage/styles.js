@@ -16,14 +16,14 @@ export const BackgroundWrapper = styled.div`
     @media screen and (min-width: 1920px) {
         height: ${(props) => (props.image ? `50vh` : `20vh`)};
     }
-    > div {
+    > div#position {
         position: relative;
         margin: 0px;
         width: 100%;
         height: 100%;
         background-color: ${(props) =>
-            props.image ? `${colors.lightBlue}` : `${colors.white}`};
-        > div {
+            props.image ? `${colors.bggrey}` : `${colors.white}`};
+        > div#container {
             position: ${(props) => (props.image ? `absolute` : `relative`)};
             margin-top: 70px;
             @media screen and (min-width: 768px) {
@@ -35,6 +35,20 @@ export const BackgroundWrapper = styled.div`
             }
             top: 30%;
             width: 50%;
+            > div {
+                > h1 {
+                    margin-bottom: 10px;
+                }
+                > h3 {
+                    margin-top: 10px;
+                }
+            }
+            > h1 {
+                margin-bottom: 10px;
+            }
+            > h3 {
+                margin-top: 10px;
+            }
             color: ${(props) =>
                 props.image ? `${colors.white}` : `${colors.primaryBlack}`};
         }
