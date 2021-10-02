@@ -5,7 +5,6 @@ fragment Facility on Facility {
   updatedAt
   publishedAt
   name
-  slug
   content {
     ... on RichText {
       raw

@@ -21,10 +21,11 @@ const ServicePage = ({ data }) => {
 			</BackgroundImage>
 			<PageContent htmlContent={data.graphCmsPageData.content.html} />
 			<CtaCard
-				head="Would you like to join the team?"
-				subHead="Please fill this form and our team will reach out to you at the earliest."
-				btnText="View Job Openings"
-				btnLink="/careers"
+				head="Interested in securing our services?"
+				subHead="Please fill out this form and our team will reach out to
+                        you at the earliest."
+				btnText="Contact Us"
+				btnLink="/contact-us"
 			/>
 			<Footer />
 		</Layout>

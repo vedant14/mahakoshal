@@ -86,6 +86,12 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  textarea {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
+    color: ${colors.primaryBlack};
+  }
+
   li {
     margin-top: 10px;
   }
@@ -281,6 +287,14 @@ export const GlobalStyles = createGlobalStyle`
     opacity: 1;
     transform: none;
     visibility: visible;
+  }
+
+  .error{
+    color: ${colors.brandRed};
+  }
+
+  .placeholder{
+    color: ${colors.darkGrey};
   }
 
   table {

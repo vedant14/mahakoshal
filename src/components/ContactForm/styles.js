@@ -18,6 +18,10 @@ export const Wrapper = styled.div`
         border-radius: 10px;
         > img {
             width: 200px;
+            max-width: 100%;
+        }
+        > h3 {
+            padding: 10px;
         }
     }
     .form-row {
