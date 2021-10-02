@@ -46,7 +46,15 @@ export function Map() {
                     {data.allGraphCmsContactUs.nodes.map((contact) => (
                         <div key={contact.id}>
                             <h3>{contact.type}</h3>
-                            <h4>{contact.email}</h4>
+                            <h4>
+                                <a
+                                    href={`mailto:${contact.email}`}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    {contact.email}
+                                </a>
+                            </h4>
                             <h4>{contact.mobile}</h4>
                         </div>
                     ))}

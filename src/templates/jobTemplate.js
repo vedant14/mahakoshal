@@ -26,8 +26,15 @@ const JobTemplate = ({ data }) => {
       />
       <div style={{ margin: "80px auto", textAlign: "center" }}>
         <button className="primary-button button">
-          <a href="www.goggle.com">Apply Now</a>
+          <a
+            href="mailto:hr@mahakoshal.in?subject=To%20apply%20for%20a%20position%20at%20Mahakoshal"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Apply Now
+          </a>
         </button>
+        <p> or send a mail at hr@mahakoshal.in</p>
       </div>
       <Footer />
     </Layout>
