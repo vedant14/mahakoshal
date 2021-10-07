@@ -5,6 +5,7 @@ fragment Industry on Industry {
   updatedAt
   publishedAt
   industryType
+  industryGroup
   slug
   pageContent {
     ... on RichText {

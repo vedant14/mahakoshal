@@ -44,16 +44,46 @@ export const Nav = styled.div`
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 30px;
-        > div#head {
-          margin: 20px 0px;
-          &:first-child {
-            padding-right: 10px;
-            border-right: 2px solid ${colors.brandRed};
-          }
-          > h4 {
-            margin: 10px 0px 40px 0px;
-            line-height: 0px;
-          }
+      }
+    }
+    .navhead {
+      margin: 20px 0px;
+      &:first-child {
+        padding-right: 10px;
+        border-right: 2px solid ${colors.brandRed};
+      }
+      > h4 {
+        margin: 10px 0px 40px 0px;
+        line-height: 0px;
+      }
+    }
+
+    .sublist {
+      position: relative;
+      > h4 {
+        display: flex;
+        align-items: center;
+        margin: 15px 0px;
+        > img {
+          margin-inline-start: 10px;
+          width: 15px;
+          filter: invert(52%) sepia(8%) saturate(787%) hue-rotate(166deg) brightness(91%) contrast(87%);
+
+          height: 15px;
+        }
+      }
+      > div#sub-list {
+        position: absolute;
+        background: ${colors.brandBlue};
+        > p > a {
+          color: ${colors.white};
+        }
+        left: 120px;
+        top: -10px;
+      }
+      &:hover {
+        > div#sub-list {
+          display: block;
         }
       }
     }
@@ -69,6 +99,7 @@ export const Nav = styled.div`
   }
   .nav-link {
     > a,
+    h4,
     span {
       color: ${colors.darkGrey};
       &:hover {
