@@ -55,6 +55,7 @@ export const Nav = styled.div`
       > h4 {
         margin: 10px 0px 40px 0px;
         line-height: 0px;
+        color: ${colors.primaryBlack} !important;
       }
     }
 
@@ -67,7 +68,8 @@ export const Nav = styled.div`
         > img {
           margin-inline-start: 10px;
           width: 15px;
-          filter: invert(52%) sepia(8%) saturate(787%) hue-rotate(166deg) brightness(91%) contrast(87%);
+          filter: invert(52%) sepia(8%) saturate(787%) hue-rotate(166deg)
+            brightness(91%) contrast(87%);
 
           height: 15px;
         }
